@@ -12,7 +12,7 @@ String random = "wDed";
 		// 3. Print your String to the console in lower case.
 
 		// 4. Print the first 3 char's of your String
-		//    HINT: .substring(start,end)
+		//    HINT: .substring(start,end)  jk
 		
 		// 5. Print a single char somewhere in the middle of your String
 		//    REMINDER: char's in string start at index 0
