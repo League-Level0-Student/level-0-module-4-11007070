@@ -3,13 +3,26 @@ package _03_char._3_pi_aloud;
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class PiAloud {
 public static void main(String[] args) {
 	String pi = "3.14159265358979323846";
 	for (int i = 0; i < pi.length(); i++) {
-		System.out.print(pi.charAt(i));
-		speak(pi.charAt(i));
+		//speak(pi.charAt(i));
+		char inputChar = getInputFromUser();
+		if (inputChar == pi.charAt(i))
+		{
+			System.out.println("correct");
+		}
+		else 
+		{
+			System.out.println("incorrect");
+		}
+		//System.out.print(pi.charAt(i));
 	}
+	
+	
 }
 	// 1. Make a main method and make sure your program can run
 
@@ -32,11 +45,12 @@ public static void main(String[] args) {
 	/********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
 
 	static void speak(char characterToSpeak) {
-		try {
+		/*try {
 			Runtime.getRuntime().exec("say " + characterToSpeak).waitFor();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
+		JOptionPane.showMessageDialog(null, characterToSpeak);
 	}
 
 	private static void pause(int seconds) {
